@@ -15,7 +15,8 @@ export class Jot {
   //id='jotList'
   get cardHTMLTemplate() {
     return `
-    <div class="p-1 my-3 border border-light text-white rounded selectable">
+    <div 
+   onclick="app.JotsController.setActiveJot('${this.id}')" class="p-1 my-3 border border-light text-white rounded selectable">
       <div class="d-flex justify-content-between">
         <p>${this.title}</p>
         <p>08/30/24</p>
@@ -26,6 +27,37 @@ export class Jot {
     </div>
   `
   }
+
+  get contentHTMLTemplate() {
+    return `<div class="text-white bg-card rounded p-4 my-1">
+              <div>
+                <div>
+                  <div>COLOR ELEMENT</div>
+                </div>
+              </div>
+              <div>
+                <h1>${this.title}</h1>
+                <div class="d-flex justify-content-between mb-3">
+                  <div class="text-secondary">
+                    <div>Created on: 08/30/2024</div>
+                    <div>Last updated: Friday 08/30/2024 3:00pm</div>
+                  </div>
+                  <div>
+                    <button class="btn btn-outline-danger">Delete</button>
+                    <button class="btn btn-bg-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <textarea class="w-100" name=""
+                  id="">${this.body}</textarea>
+              </div>
+              <div class="d-flex justify-content-end">100 words</div>
+    `
+  }
+
+
+  //for placeholder image if possible
 
   // //id='jotsContent'
   // get contentHTMLTemplate() {
