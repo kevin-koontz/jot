@@ -5,7 +5,7 @@
   background-color: #1f1d38;
 }
 
-.bg-secondary {
+.bg-card {
   background-color: #282546;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .text-secondary {
-  color: #282546;
+  color: #1e8da6;
 }
 
 .text-danger {
@@ -24,3 +24,11 @@
 .btn-bg-primary {
   background-color: #1e8da6;
 }
+
+.card-bg-style {
+  height: 80vh;
+}
+
+/* label {
+  color: white;
+} */
