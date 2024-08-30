@@ -26,9 +26,11 @@ class ObservableAppState extends EventEmitter {
       updatedAt: 'Last updated 08/30/2024 at 10:45AM',
       color: 'Pink'
     })
-
-
   ]
+
+
+  // /**@type {Jot} */
+  // jotsPlaceholder = null
 
 
 

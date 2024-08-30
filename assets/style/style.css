@@ -29,6 +29,24 @@
   height: 80vh;
 }
 
+.img-textarea {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+textarea {
+  resize: none;
+  height: 80vh;
+  width: 100%;
+  border: 2px solid #1e8da6;
+  border-radius: 4px;
+  padding: 2em 2em;
+  background-color: #3a3760;
+  color: #f1ecdf;
+}
+
 /* label {
   color: white;
 } */
