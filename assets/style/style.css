@@ -1,1 +1,26 @@
 /* BASIC STYLES HERE */
+
+
+.bg-main {
+  background-color: #1f1d38;
+}
+
+.bg-secondary {
+  background-color: #282546;
+}
+
+.text-white {
+  color: #f1ecdf;
+}
+
+.text-secondary {
+  color: #282546;
+}
+
+.text-danger {
+  color: #e1561b;
+}
+
+.btn-bg-primary {
+  background-color: #1e8da6;
+}
