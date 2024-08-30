@@ -10,6 +10,18 @@ export class Jot {
     this.updatedAt = data.updatedAt
     this.color = data.color
 
-
   }
+
+  get cardHTMLTemplate() {
+    return `
+      <div class="d-flex justify-content-between">
+        <p>CSS TRICKS</p>
+        <p>08/30/24</p>
+      </div>
+      <p>1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+      </p>
+  `
+  }
+
+
 }
