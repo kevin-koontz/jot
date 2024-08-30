@@ -10,7 +10,7 @@ class ObservableAppState extends EventEmitter {
       body: 'Best notes you will ever read! In fact, turn back now as you may not be able to handle these notes. This is your final warning! Now on to the best notes you will ever read...',
       createdAt: '08/30/2024',
       updatedAt: 'Last updated 08/30/2024 at 10:00AM',
-      color: 'LimeGreen'
+      color: 'LimeGreen',
     }),
     new Jot({
       title: 'Worst Note #1',
