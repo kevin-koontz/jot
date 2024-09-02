@@ -6,7 +6,7 @@ export class Jot {
     this.id = generateId()
     this.title = data.title
     this.body = data.body || ''
-    this.createdAt = new Date()
+    this.createdAt = data.createdAt == undefined ? new Date() : new Date(data.createdAt)
     this.updatedAt = data.updatedAt
     this.color = data.color
 
