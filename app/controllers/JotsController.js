@@ -29,16 +29,22 @@ export class JotsController {
     jotsService.setActiveJot(jotsId)
   }
 
-  createJot() {
-    event.preventDefault()
-    console.log('Creating jot!');
-    const jotForm = event.target
-    const jotFormData = getFormData(jotForm)
-    console.log('form data', jotFormData);
-    jotsService.createJot(jotFormData)
 
+  updateJot() {
+    console.log('textarea blurred');
 
   }
+
+  // createJot() {
+  //   event.preventDefault()
+  //   console.log('Creating jot!');
+  //   const jotForm = event.target
+  //   const jotFormData = getFormData(jotForm)
+  //   console.log('form data', jotFormData);
+  //   jotsService.createJot(jotFormData)
+
+
+  // }
 
 
   // drawPlaceholder() {

@@ -2,12 +2,12 @@ import { AppState } from "../AppState.js";
 import { Jot } from "../models/Jot.js";
 
 class JotsService {
-  createJot(rawJotFormData) {
-    const jot = AppState.jots
-    const newJot = new Jot(rawJotFormData)
-    jot.push(rawJotFormData)
+  // createJot(rawJotFormData) {
+  //   const jot = AppState.jots
+  //   const newJot = new Jot(rawJotFormData)
+  //   jot.push(rawJotFormData)
 
-  }
+  // }
 
   setActiveJot(jotId) {
     const jot = AppState.jots

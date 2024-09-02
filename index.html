@@ -53,7 +53,7 @@
           <div class="p-2 my-1 border border-dark rounded bg-card card-bg-style">
             <div class="d-flex justify-content-end text-white"># Jots</div>
             <div class="text-secondary">Add a Jot</div>
-            <form class="d-flex justify-content-start">
+            <form onsubmit="app.JotsController.createJot()" class="d-flex justify-content-start">
               <div class="m-2">
                 <input id="color" name="color" type="color" class="rounded" required>
                 <label for="color"></label>
