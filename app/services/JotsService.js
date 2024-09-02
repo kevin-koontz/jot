@@ -2,6 +2,9 @@ import { AppState } from "../AppState.js";
 import { Jot } from "../models/Jot.js";
 
 class JotsService {
+  createJot(jotFormData) {
+    throw new Error("Method not implemented.");
+  }
 
   setActiveJot(jotId) {
     const jot = AppState.jots
