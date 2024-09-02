@@ -6,7 +6,7 @@ export class Jot {
     this.id = generateId()
     this.title = data.title
     this.body = data.body || ''
-    this.createdAt = data.createdAt
+    this.createdAt = new Date()
     this.updatedAt = data.updatedAt
     this.color = data.color
 
@@ -19,7 +19,7 @@ export class Jot {
    onclick="app.JotsController.setActiveJot('${this.id}')" class="p-1 my-3 border border-light text-white rounded selectable">
       <div class="d-flex justify-content-between">
         <p>${this.title}</p>
-        <p>08/30/24</p>
+        <p>${this.createdDate}</p>
       </div>
       <div class="text-secondary px-2">
         <p>${this.body}</p>
@@ -39,7 +39,7 @@ export class Jot {
                 <h1>${this.title}</h1>
                 <div class="d-flex justify-content-between mb-3">
                   <div class="text-secondary">
-                    <div>Created on: 08/30/2024</div>
+                    <div>Created on: ${this.createdDate}</div>
                     <div>Last updated: Friday 08/30/2024 3:00pm</div>
                   </div>
                   <div>
@@ -54,6 +54,10 @@ export class Jot {
               </div>
               <div class="d-flex justify-content-end">100 words</div>
     `
+  }
+
+  get createdDate() {
+    return this.createdAt.toLocaleDateString()
   }
 
 

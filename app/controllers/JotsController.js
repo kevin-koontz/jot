@@ -8,9 +8,10 @@ export class JotsController {
     console.log('Jots controller is working!');
 
     AppState.on('jots', this.drawJots)
-
-    this.drawJots()
     AppState.on('activeJot', this.drawActiveJot)
+
+    jotsService.loadCars()
+    // this.drawJots()
     // this.drawPlaceholder()
   }
 
