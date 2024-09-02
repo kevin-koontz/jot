@@ -6,6 +6,9 @@ import { getFormData } from "../utils/FormHandler.js";
 export class JotsController {
   constructor() {
     console.log('Jots controller is working!');
+
+    AppState.on('jots', this.drawJots)
+
     this.drawJots()
     AppState.on('activeJot', this.drawActiveJot)
     // this.drawPlaceholder()
@@ -14,7 +17,7 @@ export class JotsController {
 
   drawJots() {
     const jots = AppState.jots
-    // console.log('drawing jots!');
+    console.log('drawing jots!', jots);
     let JotsHTML = ''
     jots.forEach(jot => JotsHTML += jot.cardHTMLTemplate)
     setHTML('jotsList', JotsHTML)
@@ -35,16 +38,15 @@ export class JotsController {
 
   }
 
-  // createJot() {
-  //   event.preventDefault()
-  //   console.log('Creating jot!');
-  //   const jotForm = event.target
-  //   const jotFormData = getFormData(jotForm)
-  //   console.log('form data', jotFormData);
-  //   jotsService.createJot(jotFormData)
+  createJot() {
+    event.preventDefault()
+    console.log('Creating jot!');
+    const jotForm = event.target
+    const jotFormData = getFormData(jotForm)
+    console.log('form data', jotFormData);
 
-
-  // }
+    jotsService.createJot(jotFormData)
+  }
 
 
   // drawPlaceholder() {
