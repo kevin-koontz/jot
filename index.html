@@ -98,12 +98,12 @@
                   </div>
                   <div>
                     <button onclick="app.JotsController.deleteJot()" class="btn btn-outline-danger">Delete</button>
-                    <button onclick="app.JotsController.saveJotBody()" class="btn btn-bg-primary">Save</button>
+                    <button class="btn btn-bg-primary">Save</button>
                   </div>
                 </div>
               </div>
               <div>
-                <textarea class="w-100" name=""
+                <textarea onblur="app.JotsController.updateJots()" class="w-100" name=""
                   id="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, beatae, dolorem temporibus itaque aperiam quod commodi praesentium aspernatur tempora soluta eaque perferendis consequatur enim tempore harum, nemo maxime sequi magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto alias sed aperiam odit eius illum, ducimus excepturi officiis beatae magni deserunt totam porro nisi, quia quis, laborum quisquam similique est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis commodi itaque neque unde odit iste perspiciatis consequuntur aliquid saepe eum eligendi et enim repellendus, explicabo odio ab consequatur. Adipisci, ut.</textarea>
               </div>
               <div class="d-flex justify-content-end">100 words</div>

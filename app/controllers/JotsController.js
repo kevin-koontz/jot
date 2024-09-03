@@ -10,8 +10,7 @@ export class JotsController {
     AppState.on('jots', this.drawJots)
     AppState.on('activeJot', this.drawActiveJot)
 
-    jotsService.loadCars()
-    // this.drawJots()
+    jotsService.loadJots()
   }
 
 
@@ -43,8 +42,14 @@ export class JotsController {
     jotsService.createJot(jotFormData)
   }
 
-  saveJotBody() {
-    jotsService.saveJotBody()
+  updateJots() {
+    console.log('textarea blurred');
+    const textareaElm = event.target
+    // @ts-ignore
+    console.log(textareaElm.value);
+    // @ts-ignore
+    const updateBody = textareaElm.value
+
 
   }
 

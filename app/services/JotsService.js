@@ -3,6 +3,11 @@ import { Jot } from "../models/Jot.js";
 import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
+  updateJot(jotId) {
+    const jots = AppState.jots
+    const jotIndex = jots.findIndex(jot => jot.id == jotId)
+    console.log(jotIndex);
+  }
   saveJotBody() {
     const jot = AppState.activeJot
 
@@ -40,7 +45,7 @@ class JotsService {
     saveState('jots', AppState.jots)
   }
 
-  loadCars() {
+  loadJots() {
     const jotsFromLocalStorage = loadState('jots', [Jot])
     AppState.jots = jotsFromLocalStorage
   }
