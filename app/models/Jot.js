@@ -44,12 +44,12 @@ export class Jot {
                   </div>
                   <div>
                     <button onclick="app.JotsController.deleteJot('${this.id}')" class="btn btn-outline-danger">Delete</button>
-                    <button class="btn btn-bg-primary">Save</button>
+                    <button onclick="app.JotsController.saveJotBody()" class="btn btn-bg-primary">Save</button>
                   </div>
                 </div>
               </div>
               <div>
-                <textarea class="w-100" name=""
+                <textarea class="w-100" name="body input area"
                   id="">${this.body}</textarea>
               </div>
               <div class="d-flex justify-content-end">100 words</div>
@@ -58,6 +58,10 @@ export class Jot {
 
   get createdDate() {
     return this.createdAt.toLocaleDateString()
+  }
+
+  get jotBodyUpdate() {
+    return `<textarea class="w-100" name="body input area" id="">${this.body}</textarea>`
   }
 
 

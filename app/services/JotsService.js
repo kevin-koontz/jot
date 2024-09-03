@@ -3,6 +3,13 @@ import { Jot } from "../models/Jot.js";
 import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
+  saveJotBody() {
+    const jot = AppState.activeJot
+
+
+    AppState.emit('activeJot')
+
+  }
 
   deleteJot(jotId) {
     const jots = AppState.jots

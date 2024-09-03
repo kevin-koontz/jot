@@ -33,11 +33,6 @@ export class JotsController {
   }
 
 
-  updateJot() {
-    console.log('textarea blurred');
-
-  }
-
   createJot() {
     event.preventDefault()
     console.log('Creating jot!');
@@ -46,6 +41,11 @@ export class JotsController {
     console.log('form data', jotFormData);
 
     jotsService.createJot(jotFormData)
+  }
+
+  saveJotBody() {
+    jotsService.saveJotBody()
+
   }
 
   deleteJot(jotId) {
