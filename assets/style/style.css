@@ -25,6 +25,10 @@
   background-color: #1e8da6;
 }
 
+.btn-bg-secondary {
+  background-color: #e1561b;
+}
+
 .card-bg-style {
   height: 80vh;
 }
@@ -59,4 +63,8 @@ textarea {
   border: 2px solid white;
   border-radius: 5px;
   background-color: white;
+}
+
+.btn-width {
+  width: 150px;
 }
