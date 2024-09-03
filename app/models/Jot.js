@@ -43,7 +43,7 @@ export class Jot {
                     <div>Last updated: Friday 08/30/2024 3:00pm</div>
                   </div>
                   <div>
-                    <button class="btn btn-outline-danger">Delete</button>
+                    <button onclick="app.JotsController.deleteJot('${this.id}')" class="btn btn-outline-danger">Delete</button>
                     <button class="btn btn-bg-primary">Save</button>
                   </div>
                 </div>

@@ -12,7 +12,6 @@ export class JotsController {
 
     jotsService.loadCars()
     // this.drawJots()
-    // this.drawPlaceholder()
   }
 
 
@@ -49,10 +48,14 @@ export class JotsController {
     jotsService.createJot(jotFormData)
   }
 
+  deleteJot(jotId) {
+    const userDeleteJot = window.confirm("Are you sure you want to delete this Jot?")
+    if (userDeleteJot == false) {
+      return
+    }
+    console.log('deleting jot', jotId);
 
-  // drawPlaceholder() {
-  //   const placeholder = AppState.jotsPlaceholder
-  //   console.log('drawing placeholder!', placeholder);
-  //   setHTML('jotsContent', placeholder.contentHTMLTemplate)
-  // }
+    jotsService.deleteJot(jotId)
+  }
+
 }

@@ -3,6 +3,16 @@ import { Jot } from "../models/Jot.js";
 import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
+
+  deleteJot(jotId) {
+    const jots = AppState.jots
+    const jotIndex = jots.findIndex(jot => jot.id == jotId)
+    console.log(jotIndex);
+
+    jots.splice(jotIndex, 1)
+
+    this.saveJots()
+  }
   createJot(jotFormData) {
     const jot = AppState.jots
     const newJot = new Jot(jotFormData)
