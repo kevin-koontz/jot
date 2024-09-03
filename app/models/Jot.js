@@ -9,8 +9,16 @@ export class Jot {
     this.createdAt = data.createdAt == undefined ? new Date() : new Date(data.createdAt)
     this.updatedAt = data.updatedAt
     this.color = data.color
-
+    // this.length = Jot.length
   }
+
+  //id='jotsNumber'
+  // get countHTMLTemplate() {
+  //   return `
+  // <div class="d-flex justify-content-end text-white">${this.length} Jots</div>
+  // `
+  // }
+
 
   //id='jotList'
   get cardHTMLTemplate() {
@@ -28,6 +36,7 @@ export class Jot {
   `
   }
 
+  //id='activeJot'
   get contentHTMLTemplate() {
     return `<div class="text-white bg-card rounded p-4 my-1">
               <div>

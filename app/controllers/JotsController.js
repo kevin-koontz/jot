@@ -21,6 +21,14 @@ export class JotsController {
     jots.forEach(jot => JotsHTML += jot.cardHTMLTemplate)
     setHTML('jotsList', JotsHTML)
   }
+  //attempting to look at draw jots.length
+  // drawJotsCount() {
+  //   const jots = AppState.jots
+  //   console.log('jots array', jots);
+  //   const jotCount = jots.length
+  //   console.log('Total Jot count:', jotCount);
+  //   setHTML('jotsNumber')
+  // }
 
   drawActiveJot() {
     const activeJot = AppState.activeJot
