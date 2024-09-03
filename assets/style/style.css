@@ -47,6 +47,16 @@ textarea {
   color: #f1ecdf;
 }
 
-/* label {
-  color: white;
-} */
+.jot-border {
+  border-left: 2px solid;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.rectangle {
+  width: 200px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: white;
+}

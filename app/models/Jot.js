@@ -5,7 +5,7 @@ export class Jot {
   constructor(data) {
     this.id = generateId()
     this.title = data.title
-    this.body = data.body
+    this.body = data.body || ''
     this.createdAt = data.createdAt == undefined ? new Date() : new Date(data.createdAt)
     this.updatedAt = data.updatedAt
     this.color = data.color
@@ -16,7 +16,7 @@ export class Jot {
   get cardHTMLTemplate() {
     return `
     <div 
-   onclick="app.JotsController.setActiveJot('${this.id}')" class="p-1 my-3 border border-light text-white rounded selectable">
+   onclick="app.JotsController.setActiveJot('${this.id}')" class="p-1 my-3 jot-border text-white selectable" style="border-color: ${this.color};">
       <div class="d-flex justify-content-between">
         <p>${this.title}</p>
         <p>${this.createdDate}</p>
@@ -32,7 +32,7 @@ export class Jot {
     return `<div class="text-white bg-card rounded p-4 my-1">
               <div>
                 <div>
-                  <div>COLOR ELEMENT</div>
+                  <div class="rectangle" style="border-color: ${this.color}; background-color: ${this.color};"></div>
                 </div>
               </div>
               <div>
@@ -49,7 +49,7 @@ export class Jot {
                 </div>
               </div>
               <div>
-                <textarea class="w-100" name="body input area" id="">${this.body}</textarea>
+                <textarea onblur="app.JotsController.updateJots()" class="w-100" name="body input area" id="">${this.body}</textarea>
               </div>
               <div class="d-flex justify-content-end">100 words</div>
     `

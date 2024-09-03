@@ -46,10 +46,10 @@ export class JotsController {
     console.log('textarea blurred');
     const textareaElm = event.target
     // @ts-ignore
-    console.log(textareaElm.value);
-    // @ts-ignore
-    const updateBody = textareaElm.value
+    const updatedBody = textareaElm.value
+    console.log('text from textarea', updatedBody);
 
+    jotsService.updateJots()
 
   }
 

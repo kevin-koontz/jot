@@ -3,14 +3,10 @@ import { Jot } from "../models/Jot.js";
 import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
-  updateJot(jotId) {
-    const jots = AppState.jots
-    const jotIndex = jots.findIndex(jot => jot.id == jotId)
-    console.log(jotIndex);
-  }
-  saveJotBody() {
+  updateJots(updatedBody) {
     const jot = AppState.activeJot
 
+    jot.body = updatedBody
 
     AppState.emit('activeJot')
 
