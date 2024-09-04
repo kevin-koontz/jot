@@ -12,13 +12,30 @@ class JotsService {
 
 
     jot.body = updatedBody
-    console.log('updated jot', jot); // -- good to here
-    // problem is body is updated, but not persistent through refresh
+    console.log('updated', jot.body);
+
+    jot.updatedAt = new Date()
+    console.log('updated at:', jot.updatedAt);
+
+    AppState.emit('activeJot')
+    AppState.emit('jots')
 
     this.saveJots()
-    AppState.emit('activeJot')
+    // this.loadJots()
 
   }
+
+  // updateCaseFile(updatedBody) {
+  //   const caseFile = AppState.activeCaseFile
+
+  //   caseFile.body = updatedBody
+  //   caseFile.lastAccessedAt = new Date()
+  //   caseFile.locked = true
+
+  //   AppState.emit('activeCaseFile') // this will manually trigger listener for activeCaseFile
+  //   AppState.emit('caseFiles')
+  //   this.saveCaseFiles()
+  // }
 
   deleteJot(jotId) {
     const jots = AppState.jots

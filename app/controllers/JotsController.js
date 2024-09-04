@@ -31,6 +31,7 @@ export class JotsController {
     setHTML('jotsNumber', jotCount + " Jots")
   }
 
+
   drawActiveJot() {
     const activeJot = AppState.activeJot
     setHTML(`activeJot`, activeJot.contentHTMLTemplate)
