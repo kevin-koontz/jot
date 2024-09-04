@@ -25,18 +25,6 @@ class JotsService {
 
   }
 
-  // updateCaseFile(updatedBody) {
-  //   const caseFile = AppState.activeCaseFile
-
-  //   caseFile.body = updatedBody
-  //   caseFile.lastAccessedAt = new Date()
-  //   caseFile.locked = true
-
-  //   AppState.emit('activeCaseFile') // this will manually trigger listener for activeCaseFile
-  //   AppState.emit('caseFiles')
-  //   this.saveCaseFiles()
-  // }
-
   deleteJot(jotId) {
     const jots = AppState.jots
     const jotIndex = jots.findIndex(jot => jot.id == jotId)

@@ -7,7 +7,8 @@ export class Jot {
     this.title = data.title
     this.body = data.body || ''
     this.createdAt = data.createdAt == undefined ? new Date() : new Date(data.createdAt)
-    this.updatedAt = data.updatedAt
+    this.updatedAt = data.updatedAt == undefined ? new Date() :
+      new Date(data.updatedAt)
     this.color = data.color
     // this.length = Jot.length
   }
@@ -49,7 +50,7 @@ export class Jot {
                 <div class="d-flex justify-content-between mb-3">
                   <div class="text-secondary">
                     <div>Created on: ${this.createdDate}</div>
-                    <div>Last updated: Friday 08/30/2024 3:00pm</div>
+                    <div>Last updated: ${this.updatedDateAndTime}</div>
                   </div>
                   <div>
                     <button onclick="app.JotsController.deleteJot('${this.id}')" class="btn btn-outline-danger btn-width">Delete</button>
@@ -68,4 +69,7 @@ export class Jot {
     return this.createdAt.toLocaleDateString()
   }
 
+  get updatedDateAndTime() {
+    return this.updatedAt.toLocaleString()
+  }
 }
