@@ -9,8 +9,10 @@ export class JotsController {
 
     AppState.on('jots', this.drawJots)
     AppState.on('activeJot', this.drawActiveJot)
+    AppState.on('jots', this.drawJotsCount)
 
     jotsService.loadJots()
+    this.drawJotsCount()
   }
 
 
@@ -21,14 +23,13 @@ export class JotsController {
     jots.forEach(jot => JotsHTML += jot.cardHTMLTemplate)
     setHTML('jotsList', JotsHTML)
   }
-  //attempting to look at draw jots.length
-  // drawJotsCount() {
-  //   const jots = AppState.jots
-  //   console.log('jots array', jots);
-  //   const jotCount = jots.length
-  //   console.log('Total Jot count:', jotCount);
-  //   setHTML('jotsNumber')
-  // }
+  drawJotsCount() {
+    const jots = AppState.jots
+    console.log('jots array', jots);
+    const jotCount = jots.length
+    console.log('Total Jot count:', jotCount);
+    setHTML('jotsNumber', jotCount + " Jots")
+  }
 
   drawActiveJot() {
     const activeJot = AppState.activeJot
@@ -57,7 +58,7 @@ export class JotsController {
     const updatedBody = textareaElm.value
     console.log('text from textarea', updatedBody);
 
-    jotsService.updateJots()
+    jotsService.updateJots(updatedBody)
 
   }
 

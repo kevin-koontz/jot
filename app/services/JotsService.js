@@ -4,10 +4,18 @@ import { loadState, saveState } from "../utils/Store.js";
 
 class JotsService {
   updateJots(updatedBody) {
+    console.log('updatedBody', updatedBody)
+
+
     const jot = AppState.activeJot
+    console.log('active jot ', jot);
+
 
     jot.body = updatedBody
+    console.log('updated jot', jot); // -- good to here
+    // problem is body is updated, but not persistent through refresh
 
+    this.saveJots()
     AppState.emit('activeJot')
 
   }

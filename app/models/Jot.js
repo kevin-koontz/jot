@@ -15,7 +15,7 @@ export class Jot {
   //id='jotsNumber'
   // get countHTMLTemplate() {
   //   return `
-  // <div class="d-flex justify-content-end text-white">${this.length} Jots</div>
+  // <div class="d-flex justify-content-end text-white"> # Jots</div>
   // `
   // }
 
